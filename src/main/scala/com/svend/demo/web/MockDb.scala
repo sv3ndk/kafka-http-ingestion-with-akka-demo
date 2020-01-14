@@ -35,7 +35,6 @@ object MockDb {
 
     case (ctx, ResponseFromDb(rows, replyTo)) =>
 
-      println("one more page")
       replyTo ! Rows(rows)
       Behaviors.same
   }
